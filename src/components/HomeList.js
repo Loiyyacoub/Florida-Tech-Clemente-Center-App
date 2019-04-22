@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import axios from 'axios';
+//import NavigationBar from 'react-native-navigation-bar';
 
 class HomeList extends Component {
   componentWillMount(){
+    console.log('componentWillMount in HomeList');
   }
-
   render(){
-    const { textStyle, viewStyle } = styles;
+    const { textStyle, viewStyle, container } = styles;
     return (
-      <View style={viewStyle}>
-        <Text style={textStyle}>HomeList</Text>
-      </View>
+        <View style={viewStyle}>
+          <Text style={textStyle}>  🕒 Today's Hours</Text>
+        </View>
     );
   }
 }
+
 const styles = {
   viewStyle:{
     backgroundColor: 'lightgrey',
@@ -32,4 +35,5 @@ const styles = {
     fontSize: 20
   }
 };
+
 export default HomeList;
